@@ -1,5 +1,5 @@
 Alphasight::Application.routes.draw do
 
-  root :to => 'pages#home'
+  root :to => 'advisors#index'
 
 end
