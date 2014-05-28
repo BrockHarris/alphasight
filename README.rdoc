@@ -1,13 +1,13 @@
 == Sample App for AlphaSights
-All email prediction logic is handled in the model <tt>advisor.rb</tt> which uses self-explanatory class/method naming, and markup where needed.
-
+All email prediction logic is handled in the <tt>advisor.rb</tt> model.
+Examples from the original sample dataset were used for the rspec tests.
 
 == Setup
 
-1. Install the needed gems:
+1. Install gems required for the UI:
        bundle
 
-2. Setup & populate the database with sample data:
+2. Setup & populate the database with our sample data:
        rake db:setup
 
-3. Navigate to localhost:3000 to see the original data and predicted results.
+3. Navigate to localhost:3000 to see the original dataset and subsequently predicted results!

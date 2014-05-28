@@ -2,7 +2,9 @@ class Advisor < ActiveRecord::Base
 	attr_accessible :pattern, :domain, :email, :full_name, :first_name, :last_name, :is_prediction
 
 	has_many :predictions
+	
 	after_create :handle_new_advisor
+
 	scope :known, where(is_prediction: false)
 	scope :predicted, where(is_prediction: true)
 
@@ -65,7 +67,6 @@ class Advisor < ActiveRecord::Base
 		self.domain = self.email[/[^@]+$/]
 		name = self.full_name.split(' ')
 		self.pattern = pattern_of(self.email)
-
 		self.first_name = name.first
 		self.last_name = name.last
 		self.save!
